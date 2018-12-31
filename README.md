@@ -9,13 +9,6 @@ PHP version 5.x (+) is required for running this.
 <strong>Syntax:</strong> <code>$vCHALL->enable('5s');</code>
 ## Integration
 <pre>
-/*
-****************
-* vChallenge PHP Bot Checker
-* Global import (for all your files)
-*
-*****************
-*/	
 require_once(__DIR__ . '/class.php');
 $vCHALL = new vChallenge\vCHALL();
 $vCHALL->enable('reCAPTCHA'); // Mode: 5s (checking in 5 seconds) or reCAPTCHA (Google reCAPTCHA validation).
