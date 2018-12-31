@@ -22,7 +22,7 @@ $this->reCAPTCHA_KEY = "YOUR_KEY"; // Your reCAPTCHA key.
 $this->reCAPTCHA_SECRET_KEY = "YOUR_PRIVATE_KEY"; // Your reCAPTCHA private key.
 </pre>
 ## Whitelist
-To allow specific IP addresses, add in array() <strong>line 117</strong>. Like this:<br>
+To allow specific IP addresses, add in array() <strong>line 93</strong>. Like this:<br>
 <pre>
 $ips = array(
 '127.0.0.1',
