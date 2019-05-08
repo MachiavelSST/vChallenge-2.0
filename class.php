@@ -36,7 +36,7 @@ class vCHALL {
 	}
 	
 	function proxyIPHeader(){
-		$headers = array('HTTP_CF_CONNECTING_IP', 'HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR');
+		$headers = ['HTTP_CF_CONNECTING_IP', 'HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR'];
 		foreach($headers as $header){
 			!empty($_SERVER[$header]) ? $this->setHeader = $header : $this->setHeader = 'REMOTE_ADDR';
 			if(filter_var($_SERVER[$this->setHeader], FILTER_VALIDATE_IP))
