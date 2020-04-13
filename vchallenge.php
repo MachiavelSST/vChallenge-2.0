@@ -101,13 +101,6 @@ class vChallenge {
 		$protocol = isset($_SERVER['SERVER_PROTOCOL']) ? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.0';
 		header($protocol . ' 503 Service Temporarily Unavailable');
 	}
-	public function setReCAPTCHA($key = "", $private_key = ""){
-		if(empty($key) || empty($private_key)){
-			die("Challenge is set to reCaptcha, please set Key and Private Key.");
-		}
-		$this->reCAPTCHA_KEY = $key;
-		$this->reCAPTCHA_PRIVATE_KEY = $private_key;
-	}
 	private function getHTML(){
 		$this->getServerProtocol();
 		$code = "<DOCTYPE html><html lang='en' xmlns='//www.w3.org/1999/xhtml'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><meta http-equiv='X-UA-Compatible' content='ie=edge'><title>vChallenge ".VCHALLENGE_VERSION."</title><link href='https://bootswatch.com/4/flatly/bootstrap.css' rel='stylesheet' type='text/css'/><script src='https://www.google.com/recaptcha/api.js'></script></head><body><div class='container'><div id='banner' class='page-header'><div class='jumbotron'><h2 class='display-5'>vChallenge ".VCHALLENGE_VERSION."</h2><p class='lead'>Please, complete the security step to access <span class='badge badge-primary'>{$_SERVER['SERVER_NAME']}</span></p></div><div class='card border-primary mb-3'><div class='card-header'>Security check</div><div class='card-body text-center'><form method='POST'><input type='hidden' name='rayID' value='{$this->createNewToken()}'><h4 class='card-title'>Anti-Bot Verification Step</h4>";
