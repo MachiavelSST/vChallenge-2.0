@@ -19,7 +19,7 @@ To check a client for 5 seconds, just do this:
 $vCHALL = new vChallenge('5s');
 ```
 ## IP Whitelist
-To allow specific IP addresses, add in array() <strong>line 1222</strong>. Like this:<br>
+To allow specific IP addresses, add in array() <strong>line 122</strong>. Like this:<br>
 ```php
 $IPs = array(
 '127.0.0.1',
